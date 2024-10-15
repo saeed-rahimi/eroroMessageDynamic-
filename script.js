@@ -19,7 +19,7 @@ document
 
     const ageInput = document.getElementById("age");
     const ageError = document.getElementById("ageError");
-    const ageValue = parseInt(ageInput.value, 10);
+    const ageValue = parseInt(ageInput.value);
 
     if (isNaN(ageValue) || ageValue < 18 || ageValue > 100) {
       ageError.textContent = "Age must be a number between 18 and 100.";
@@ -29,7 +29,4 @@ document
       ageError.style.display = "none";
     }
 
-    if (isValid) {
-      console.log("Form submitted");
-    }
   });
